@@ -15,7 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         //请求授权的规则
         http.authorizeRequests()
-                .antMatchers("/").permitAll()
+                .antMatchers("/").permitAll() //无条件访问
                 .antMatchers("/level1/**").hasRole("vip1")
                 .antMatchers("/level2/**").hasRole("vip2")
                 .antMatchers("/level3/**").hasRole("vip3");
